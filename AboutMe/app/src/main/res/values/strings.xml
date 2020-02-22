@@ -19,5 +19,9 @@
         many pies. It\'s not hard math, consume less calories than you use. Jeez Jenny.
         \n\n
         Thanks for you consideration!
+        \n\n
+        \n\n
     </string>
+    <string name="what_is_your_nickname">What is your nickname?</string>
+    <string name="done_button">Done</string>
 </resources>
