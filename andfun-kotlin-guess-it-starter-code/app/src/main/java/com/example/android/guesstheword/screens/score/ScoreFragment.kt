@@ -22,6 +22,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
@@ -56,8 +57,17 @@ class ScoreFragment : Fragment() {
 
         // Get args using by navArgs property delegate
 
-        binding.scoreText.text = scoreFragmentArgs.score.toString()
-        binding.playAgainButton.setOnClickListener { onPlayAgain() }
+        binding.scoreViewModel = scoreViewModel
+
+
+
+        binding.scoreText.text = scoreViewModel.score.value.toString()
+        scoreViewModel.eventPlayAgain.observe(this, Observer { playAgain ->
+            if (playAgain) {
+                findNavController().navigate(ScoreFragmentDirections.actionRestart())
+                scoreViewModel.onPlayAgainComplete()
+            }
+        })
 
         return binding.root
     }
