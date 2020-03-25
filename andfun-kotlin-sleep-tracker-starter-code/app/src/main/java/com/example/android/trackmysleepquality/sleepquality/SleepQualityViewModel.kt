@@ -46,11 +46,7 @@ class SleepQualityViewModel(private val sleepNightKey: Long = 0L,  val database 
             }
             _navigateToSleepTracker.value = true
         }
-
     }
-
-
-
 
     override fun onCleared() {
         super.onCleared()
