@@ -47,7 +47,6 @@ class SleepTrackerFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        // Get a reference to the binding object and inflate the fragment views.
         val binding: FragmentSleepTrackerBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_sleep_tracker, container, false)
 
@@ -78,14 +77,11 @@ class SleepTrackerFragment : Fragment() {
             }
         })
 
-
-
         sleepTrackerViewModel.allnights.observe(viewLifecycleOwner, Observer {
             it?.let {
                 adapter.submitList(it)
             }
         })
-
 
         binding.setLifecycleOwner(this)
 
