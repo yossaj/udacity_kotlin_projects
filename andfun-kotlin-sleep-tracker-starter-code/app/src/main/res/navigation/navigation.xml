@@ -68,5 +68,5 @@
             app:launchSingleTop="false"
             app:popUpTo="@+id/sleep_tracker_fragment"
             app:popUpToInclusive="true" />
-    </fragment>
+    </fragment>a
 </navigation>

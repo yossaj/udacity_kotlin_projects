@@ -21,8 +21,8 @@ class SleepNightAdapter(val clickListener: SleepNightListener) :  ListAdapter<Sl
     class ViewHolder(val binding: ListNightItemNightBinding): RecyclerView.ViewHolder(binding.root){
 
         fun bind( clickListener: SleepNightListener, item: SleepNight) {
-            binding.sleep = item
             binding.clickListener = clickListener
+            binding.sleep = item
             binding.executePendingBindings()
 
         }

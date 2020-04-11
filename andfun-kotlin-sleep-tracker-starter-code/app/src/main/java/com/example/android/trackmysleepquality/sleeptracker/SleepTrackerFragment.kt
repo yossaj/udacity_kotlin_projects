@@ -52,6 +52,8 @@ class SleepTrackerFragment : Fragment() {
 
         val application = requireNotNull(this.activity).application
 
+
+
         val dataSource = SleepDatabase.getInstance(application).sleepDatabaseDao
 
         val viewModelFactory = SleepTrackerViewModelFactory(dataSource, application)
@@ -59,16 +61,18 @@ class SleepTrackerFragment : Fragment() {
         val sleepTrackerViewModel =
                 ViewModelProviders.of(this, viewModelFactory).get(SleepTrackerViewModel::class.java)
 
-        binding.sleepTrackerViewModel = sleepTrackerViewModel
-
-        val manager = GridLayoutManager(activity, 3)
-        binding.sleepList.layoutManager = manager
-
         val adapter = SleepNightAdapter(SleepNightAdapter.SleepNightListener { nightId ->
             sleepTrackerViewModel.onSleepNightClicked(nightId)
             Toast.makeText(context, "Booop", Toast.LENGTH_LONG).show()
 
         })
+
+        binding.sleepTrackerViewModel = sleepTrackerViewModel
+
+        val manager = GridLayoutManager(activity, 3)
+        binding.sleepList.layoutManager = manager
+
+
         binding.sleepList.adapter = adapter
 
         sleepTrackerViewModel.navigateToSleepDataQuality.observe(this, Observer {night ->
