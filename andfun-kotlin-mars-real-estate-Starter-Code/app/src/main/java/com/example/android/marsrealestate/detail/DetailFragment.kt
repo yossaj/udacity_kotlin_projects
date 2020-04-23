@@ -39,7 +39,6 @@ class DetailFragment : Fragment() {
         binding.viewModel = ViewModelProviders.of(
                 this, viewModelFactory).get(DetailViewModel::class.java)
 
-
         binding.setLifecycleOwner(this)
         return binding.root
     }
