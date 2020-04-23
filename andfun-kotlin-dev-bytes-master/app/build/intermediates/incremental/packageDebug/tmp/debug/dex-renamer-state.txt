@@ -1,0 +1,4 @@
+#Thu Apr 16 16:09:43 BST 2020
+base.0=/Users/kenneth.stewart/KotlinProjects/udacity_kotlin_projects/andfun-kotlin-dev-bytes-master/app/build/intermediates/dex/debug/mergeDexDebug/out
+path.0=classes.dex
+renamed.0=classes.dex

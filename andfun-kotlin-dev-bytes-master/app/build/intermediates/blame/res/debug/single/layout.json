@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/kenneth.stewart/KotlinProjects/udacity_kotlin_projects/andfun-kotlin-dev-bytes-master/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_dev_byte.xml",
+        "source": "/Users/kenneth.stewart/KotlinProjects/udacity_kotlin_projects/andfun-kotlin-dev-bytes-master/app/src/main/res/layout/fragment_dev_byte.xml"
+    },
+    {
+        "merged": "/Users/kenneth.stewart/KotlinProjects/udacity_kotlin_projects/andfun-kotlin-dev-bytes-master/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/devbyte_item.xml",
+        "source": "/Users/kenneth.stewart/KotlinProjects/udacity_kotlin_projects/andfun-kotlin-dev-bytes-master/app/src/main/res/layout/devbyte_item.xml"
+    }
+]
