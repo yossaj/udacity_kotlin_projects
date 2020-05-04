@@ -44,7 +44,6 @@ class TasksAdapter(private val viewModel: TasksViewModel) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(viewModel: TasksViewModel, item: Task) {
-
             binding.viewmodel = viewModel
             binding.task = item
             binding.executePendingBindings()
