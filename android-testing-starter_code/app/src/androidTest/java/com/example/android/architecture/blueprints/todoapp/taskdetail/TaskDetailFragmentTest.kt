@@ -76,7 +76,6 @@ class TaskDetailFragmentTest {
 
         onView(withId(R.id.task_detail_complete_checkbox)).check(matches(isDisplayed()))
         onView(withId(R.id.task_detail_complete_checkbox)).check(matches(isChecked()))
-
     }
 
 }
