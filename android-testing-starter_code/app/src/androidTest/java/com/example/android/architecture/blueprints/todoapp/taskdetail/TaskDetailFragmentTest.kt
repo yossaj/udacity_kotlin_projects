@@ -23,8 +23,6 @@ class TaskDetailFragmentTest {
 //        // WHEN - Details fragment launched to display task
         val bundle = TaskDetailFragmentArgs(activeTask.id).toBundle()
         launchFragmentInContainer<TaskDetailFragment>(bundle, R.style.AppTheme)
-
-
     }
 
 }
