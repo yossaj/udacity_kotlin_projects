@@ -39,5 +39,21 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val navController = findNavController()
+
+        viewModel.authenticationState.observe(viewLifecycleOwner, Observer { authenticationState ->
+            when (authenticationState) {
+
+                LoginViewModel.AuthenticationState.UNAUTHENTICATED -> navController.navigate(
+                    R.id.loginFragment
+                )
+                else -> Log.e(
+                    TAG, "New $authenticationState state that doesn't require any UI change"
+                )
+            }
+        })
     }
+
+    // If the user presses the back button, bring them back to the home screen
+
 }

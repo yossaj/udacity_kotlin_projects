@@ -52,12 +52,26 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
 
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner){
+            navController.popBackStack(R.id.mainFragment, false)
+        }
+
         // Inflate the layout for this fragment.
         val binding = DataBindingUtil.inflate<FragmentLoginBinding>(
             inflater, R.layout.fragment_login, container, false
         )
 
         binding.authButton.setOnClickListener { launchSignInFlow() }
+
+        viewModel.authenticationState.observe(viewLifecycleOwner, Observer { authenticationState ->
+            when (authenticationState) {
+                LoginViewModel.AuthenticationState.AUTHENTICATED -> navController.popBackStack()
+                else -> Log.e(
+                    TAG,
+                    "Authentication state that doesn't require any UI change $authenticationState"
+                )
+            }
+        })
 
         return binding.root
     }
