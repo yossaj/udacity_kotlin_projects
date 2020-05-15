@@ -37,7 +37,8 @@ private val data = listOf(
     Step("Step 1",
         "Animations with Motion Layout",
         "Learn how to build a basic animation with Motion Layout. This will crash until you complete the step in the codelab.",
-        Step1Activity::class
+        Step1Activity::class,
+        highlight = true
     ),
     Step("Step 2",
         "Animating based on drag events",
