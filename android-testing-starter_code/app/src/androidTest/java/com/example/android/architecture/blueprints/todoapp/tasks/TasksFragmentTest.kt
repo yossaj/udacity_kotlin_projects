@@ -62,7 +62,6 @@ class TasksFragmentTest{
         verify(navController).navigate(
                 TasksFragmentDirections.actionTasksFragmentToTaskDetailFragment( "id1")
         )
-
     }
 
 }

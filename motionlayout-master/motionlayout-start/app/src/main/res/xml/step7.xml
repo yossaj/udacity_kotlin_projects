@@ -31,7 +31,6 @@
                 app:dragDirection="dragRight"
         />
 
-
         <KeyFrameSet>
             <KeyPosition
                     app:framePosition="25"
