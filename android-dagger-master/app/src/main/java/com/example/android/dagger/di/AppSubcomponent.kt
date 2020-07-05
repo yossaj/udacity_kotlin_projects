@@ -5,7 +5,8 @@ import com.example.android.dagger.registration.RegistrationComponent
 import com.example.android.dagger.user.UserComponent
 import dagger.Module
 
-@Module(subcomponents = [RegistrationComponent::class, LoginComponent::class, UserComponent::class])
-class AppSubcomponents{
-
-}
+@Module(subcomponents = [
+    RegistrationComponent::class,
+    LoginComponent::class,
+    UserComponent::class])
+class AppSubcomponents

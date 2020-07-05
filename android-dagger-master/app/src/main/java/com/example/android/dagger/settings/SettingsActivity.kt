@@ -35,7 +35,6 @@ class SettingsActivity : AppCompatActivity() {
         userManager.userComponent!!.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
-
         setupViews()
     }
 

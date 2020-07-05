@@ -41,8 +41,9 @@ class MainActivity : AppCompatActivity() {
      * else carry on with MainActivity
      */
     override fun onCreate(savedInstanceState: Bundle?) {
-        val userManager = (application as MyApplication).appComponent.userManager()
         super.onCreate(savedInstanceState)
+        val userManager = (application as MyApplication).appComponent.userManager()
+
 
 
         if (!userManager.isUserLoggedIn()) {
